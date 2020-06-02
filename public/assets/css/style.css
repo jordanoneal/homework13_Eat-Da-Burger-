@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(247, 192, 15);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#eat-da-burger {
+    color: red;
+    text-align: center;
+}
+
+.burgerItem {
+    font-weight: bold;
+}
+
+.burgerBox {
+    margin: auto;
+    width: 50%;
+}

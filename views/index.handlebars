@@ -1,0 +1,37 @@
+<h1 id = "eat-da-burger">Eat-Da-Burger!</h1>
+
+
+<div class="row">
+    <!--- Burgers that have not been devoured --->
+    <div class="col-md-6">
+        <ul>
+            {{#each burgers}}
+
+            {{#unless devoured}}
+            {{> burgers/burger-block}}
+            {{/unless}}
+            {{/each}}
+        </ul>
+
+    </div>
+    <!--- devoured --->
+    <div class="col-md-6">
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            {{> burgers/burger-block}}
+            {{/if}}
+            {{/each}}
+
+        </ul>
+    </div>
+</div>
+
+
+<!-- form to input new burger --->
+<div class="burgerBox">
+    <form id= "addBurger" action="/api/burgers" method="POST">
+        <textarea type="text" name="burger_name" placeholder="Enter burger name here"></textarea>
+        <button type="submit">ADD BURGER</button>
+    </form>
+</div>
