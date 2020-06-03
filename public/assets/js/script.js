@@ -31,16 +31,17 @@ $(function () {
             devoured: true
         };
 
+        console.log(id + "hit");
+
         // send PUT request
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: devouredState
+        $.ajax( {
+            method: "PUT",
+            url: "/api/burgers/" + id,
 
         }).then(
-            function () {
+            function (data) {
                 console.log("burger devoured");
                 location.reload();
-
             }
         )
     })
